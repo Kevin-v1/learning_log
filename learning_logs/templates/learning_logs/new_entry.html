@@ -1,0 +1,16 @@
+{% extends "learning_logs/base.html" %}
+
+{% block content %}
+
+  <p><a href="{% url 'learning_logs:topic' topic.id %}">{{ topic }}</a></p>
+
+  <p>Add a new entry:</p>
+    <!-- 当这个表单提交时，请用 POST 方法，发请求到某个 URL。 -->
+    <form action="{% url 'learning_logs:new_entry' topic.id %}" method="post"> 
+    {% csrf_token %}
+    <!-- 渲染表单字段的快捷方式 -->
+    {{ form.as_p }}
+    <button name="submit">Add entry</button>
+    </form>
+
+{% endblock content %}
