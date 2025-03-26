@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-!)m4rriu60=*#a$*yr7#g-jt!00fh8sp9ze6vmn)z+x7aso&o1
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get("DJANGO_DEBUG", "") != "False"
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['learning-log-qcf6.onrender.com']
 
 
 # Application definition
